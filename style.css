@@ -4,7 +4,7 @@ header {
   width: 100%;
 }
 
-header .header__logo h1 {
+header .header__logo {
   max-width: 200px;
   font-family: 'Shrikhand', cursive;
   margin-left: auto;
