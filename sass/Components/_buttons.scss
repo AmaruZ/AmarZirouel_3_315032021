@@ -1,0 +1,12 @@
+.btn{
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to bottom right, $color-secondary,$color-primary);
+    height: 50px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    a{
+        color: white;
+    }
+}

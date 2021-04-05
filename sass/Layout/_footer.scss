@@ -1,0 +1,33 @@
+footer{
+    background-color: $color-grey;
+}
+
+
+.footer-container{
+    margin-left: 25px;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    &__logo{
+        font-family: 'Shrikhand', cursive;
+
+    }
+
+    &__list{
+        margin-top: 10px;
+        
+        a {
+            color:white;
+        }
+        li{
+            margin-top: 10px;
+        }
+        i{
+            width: 30px;
+        }
+
+
+    }
+
+}

@@ -1,15 +1,22 @@
 @import "./sass/Utils/variables";
+@import "./sass/Utils/mixins";
 @import "./sass/Base/fonts";
+@import "./sass/Base/reset";
+@import "./sass/Components/buttons";
 @import "./sass/Layout/header";
+@import "./sass/Layout/footer";
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-
-a{
-    text-decoration: none;
-    color: black;
-}
+/*@import "./utils/variables";
+@import "./utils/functions";
+@import "./utils/mixins";
+@import "./utils/extensions";
+@import "./base/base";
+@import "./base/typography";
+@import "./components/buttons";
+@import "./layouts/header";
+@import "./layouts/nav";
+@import "./layouts/container";
+@import "./layouts/form";
+@import "./pages/work";
+@import "./pages/about";
+@import "./pages/project";*/
