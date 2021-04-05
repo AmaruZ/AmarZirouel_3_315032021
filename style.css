@@ -30,7 +30,8 @@ h2 {
 
 .btn {
   font-family: 'Roboto', sans-serif;
-  background: linear-gradient(0.95turn, #9356DC, #FF79DA);
+  background: -webkit-gradient(linear, right bottom, left top, from(#9356DC), to(#FF79DA));
+  background: linear-gradient(to top left, #9356DC, #FF79DA);
   height: 50px;
   border-radius: 50px;
   color: white;
@@ -43,6 +44,58 @@ h2 {
 .btn:hover {
   -webkit-filter: brightness(110%);
           filter: brightness(110%);
+}
+
+.fonction {
+  height: 75px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #f4f4f4;
+  -webkit-box-shadow: 0px 5px 10px 0px #acacac;
+          box-shadow: 0px 5px 10px 0px #acacac;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+}
+
+.fonction__number {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 25px;
+  width: 25px;
+  background-color: #9356DC;
+  color: white;
+  border-radius: 50%;
+  margin-left: -15px;
+}
+
+.fonction__icon {
+  color: #353535;
+  margin-left: 30px;
+  margin-right: 20px;
+}
+
+:hover > .fonction__icon {
+  color: #9356DC;
+}
+
+.fonction__text {
+  font-weight: 500;
+}
+
+.fonction:hover {
+  background: #f2eafb;
 }
 
 header {
@@ -127,6 +180,15 @@ footer {
   padding-bottom: 20px;
 }
 
+.fonction-container {
+  margin-left: 20px;
+  padding-top: 30px;
+}
+
+.fonction-container__list {
+  margin-top: 30px;
+}
+
 .localisation {
   background-color: #e8e8e8;
   display: -webkit-box;
@@ -152,6 +214,12 @@ footer {
   font-family: 'Roboto', sans-serif;
   font-weight: 600;
   margin-left: 15px;
+}
+
+.restaurants-container {
+  background-color: #f4f4f4;
+  margin-top: 50px;
+  padding-top: 50px;
 }
 
 /*@import "./utils/variables";
