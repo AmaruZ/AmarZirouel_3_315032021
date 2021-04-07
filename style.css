@@ -373,6 +373,154 @@ footer {
   }
 }
 
+.resto-name {
+  height: 30rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.resto-name__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #F6F6F6;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  width: 100%;
+  padding-left: 2rem;
+  padding-right: 4rem;
+  height: 8rem;
+  border-top-left-radius: 3.3rem;
+  border-top-right-radius: 3.3rem;
+}
+
+.plats, .entrees, .desserts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #F6F6F6;
+}
+
+.plats__title, .entrees__title, .desserts__title {
+  text-transform: uppercase;
+}
+
+.plats__list, .entrees__list, .desserts__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  width: 95%;
+}
+
+.plat {
+  background-color: #FFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 35rem;
+  height: 6.8rem;
+  -webkit-box-shadow: 0px 5px 10px 0px #acacac;
+          box-shadow: 0px 5px 10px 0px #acacac;
+  border-radius: 1.2rem;
+  margin-bottom: 1.2rem;
+  overflow: hidden;
+}
+
+.plat__text {
+  margin: 1.5rem 0 1.5rem 1rem;
+  width: 26rem;
+}
+
+.plat__name {
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.plat__descrp {
+  overflow: hidden;
+  white-space: nowrap;
+  height: 1.5rem;
+  text-overflow: ellipsis;
+}
+
+.plat__price {
+  font-weight: 500;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  text-align: center;
+  width: 7rem;
+  margin-bottom: 1.5rem;
+}
+
+.plat__checked {
+  background: #99E2D0;
+  height: 6.8rem;
+  width: 6rem;
+  margin-left: -5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transform: translateX(6rem);
+          transform: translateX(6rem);
+}
+
+.plat .fas {
+  font-size: 2.2rem;
+  color: white;
+  -webkit-transform: rotate(0);
+          transform: rotate(0);
+}
+
+.plat:hover .plat__checked {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  margin-left: 0;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.plat:hover .fas {
+  -webkit-transform: rotate(1turn);
+          transform: rotate(1turn);
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+}
+
+.plat:hover .plat__text {
+  width: 21rem;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
 /*@import "./utils/variables";
 @import "./utils/functions";
 @import "./utils/mixins";
