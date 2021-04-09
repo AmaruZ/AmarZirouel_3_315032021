@@ -1,7 +1,49 @@
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
-@-webkit-keyframes loading {}
-@keyframes loading {}* {
+@-webkit-keyframes loading {
+  0% {
+    -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+  }
+  100% {
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+  }
+}
+@keyframes loading {
+  0% {
+    -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+  }
+  100% {
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+  }
+}
+
+@-webkit-keyframes show-content {
+  0% {
+    -webkit-transform: translateY(-400px);
+            transform: translateY(-400px);
+  }
+  100% {
+    -webkit-transform: translateY(-400px);
+            transform: translateY(-400px);
+  }
+}
+
+@keyframes show-content {
+  0% {
+    -webkit-transform: translateY(-400px);
+            transform: translateY(-400px);
+  }
+  100% {
+    -webkit-transform: translateY(-400px);
+            transform: translateY(-400px);
+  }
+}
+
+* {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
@@ -164,6 +206,54 @@ footer {
   width: 30px;
 }
 
+.loader {
+  width: 200px;
+  height: 200px;
+  margin-top: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.loader__bar {
+  width: 40px;
+  height: 150px;
+  background: #9356DC;
+  animation: loading 1s both alternate-reverse 3;
+}
+
+.loader__bar--1 {
+  -webkit-animation-delay: 300ms;
+          animation-delay: 300ms;
+}
+
+.loader__bar--2 {
+  -webkit-animation-delay: 600ms;
+          animation-delay: 600ms;
+}
+
+.loader__bar--3 {
+  -webkit-animation-delay: 900ms;
+          animation-delay: 900ms;
+}
+
+.content {
+  -webkit-transform: translateY(-10000px);
+          transform: translateY(-10000px);
+  -webkit-animation: show-content 2s infinite;
+          animation: show-content 2s infinite;
+  -webkit-animation-delay: 3.8s;
+          animation-delay: 3.8s;
+  width: 100%;
+}
+
 .explore {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -175,7 +265,7 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #f4f4f4;
+  background-color: #F6F6F6;
   padding-top: 40px;
   padding-bottom: 55px;
 }
@@ -231,7 +321,7 @@ footer {
 }
 
 .restaurants-container {
-  background-color: #f4f4f4;
+  background-color: #F6F6F6;
   margin-top: 50px;
   padding-top: 50px;
 }
@@ -347,32 +437,6 @@ footer {
   background: center/cover no-repeat url("/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
 }
 
-@-webkit-keyframes fill {
-  from {
-    top: 250px;
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
-  }
-  to {
-    top: -50px;
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
-  }
-}
-
-@keyframes fill {
-  from {
-    top: 250px;
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
-  }
-  to {
-    top: -50px;
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
-  }
-}
-
 .resto-name {
   height: 30rem;
   display: -webkit-box;
@@ -414,6 +478,8 @@ footer {
 
 .plats__title, .entrees__title, .desserts__title {
   text-transform: uppercase;
+  margin-bottom: 2.5rem;
+  padding-left: 1.5rem;
 }
 
 .plats__list, .entrees__list, .desserts__list {
@@ -427,6 +493,13 @@ footer {
   margin-left: auto;
   margin-right: auto;
   width: 95%;
+}
+
+.plats__underline, .entrees__underline, .desserts__underline {
+  margin-top: 5px;
+  height: 3px;
+  width: 4rem;
+  background-color: #99E2D0;
 }
 
 .plat {
@@ -519,6 +592,21 @@ footer {
   width: 21rem;
   -webkit-transition: all 1s;
   transition: all 1s;
+}
+
+.btn-container {
+  background: #F6F6F6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 3rem;
+  padding-bottom: 4rem;
 }
 
 /*@import "./utils/variables";

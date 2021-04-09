@@ -1,8 +1,39 @@
+.loader{
+    width: 200px;
+    height: $height;
+    margin-top: $margin;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    &__bar{
+        width: 40px;
+        height: 150px;
+        background: $color-primary;
+        animation: loading 1s both alternate-reverse 3;
+        @for $i from 1 through 3 {
+            &--#{$i} {
+                animation-delay: $anim-delay * $i;
+            }
+        }
+
+    }
+}
+
+.content{
+    transform: translateY(-10000px);
+    animation: show-content 2s infinite;
+    animation-delay: 3.8s;
+    width: 100%;
+}
+
+
 .explore{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: lighten($color: $color-grey, $amount: 75%);
+    background-color: $color-lightgrey;
     padding-top: 40px;
     padding-bottom: 55px;
     &__title{
@@ -50,7 +81,7 @@
 }
 
 .restaurants-container{
-    background-color: lighten($color: $color-grey, $amount: 75%);
+    background-color: $color-lightgrey;
     margin-top: 50px;
     padding-top: 50px;
     &__list{
@@ -154,16 +185,6 @@
 
 }
 
-@keyframes fill{
-    from{
-        top:250px;
-        transform: translateX(-50%);
-    }
-    to{
-        top: -50px;
-        transform:translateX(-50%);
-    }
-}
 
 .resto-name{
     height: 30rem;
@@ -189,8 +210,12 @@
     display: flex;
     flex-direction: column;
     background-color: $color-lightgrey;
+    
+
     &__title{
         text-transform: uppercase;
+        margin-bottom: 2.5rem;
+        padding-left: 1.5rem;
         
     }
     &__list{
@@ -199,9 +224,13 @@
         margin-left: auto;
         margin-right: auto;
         width: 95%;
-
     }
-    
+    &__underline{
+        margin-top: 5px;
+        height: 3px;
+        width: 4rem;
+        background-color: $color-tertiary;
+    }
 }
 
 .plat{
@@ -273,3 +302,12 @@
 
 }
 
+.btn-container{
+    background: $color-lightgrey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 3rem;
+    padding-bottom: 4rem;
+
+}

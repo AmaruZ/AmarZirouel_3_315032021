@@ -11,100 +11,118 @@
 </head>
 
 <body>
-    <header>
-        <img src="/images/logo/ohmyfood.png" title="logo" class="logo">
-    </header>
+    <div class="loader">
+        <div class="loader__bar loader__bar--1"></div>
+        <div class="loader__bar loader__bar--2"></div>
+        <div class="loader__bar loader__bar--3"></div>
+    </div>
+    <div class="content">
+        <header>
+            <img src="/images/logo/ohmyfood.png" title="logo" class="logo">
+        </header>
 
-    <section class="title-container">
-        <div class="localisation"><i class="fas fa-map-marker-alt"></i><input type="text" placeholder="Paris, Belleville"></div>
-        <div class="explore">
-            <div class="explore__title"><h2>Réservez le menu qui vous convient</h2></div>
-            <div class="explore__text">Découvrez des restaurants d'exception, séléctionnés par nos soins.</div>
-            <a href="#Restaurants" class="btn">Explorer nos restaurants</a>
-        </div>
-    </section>
+        <section class="title-container">
+            <div class="localisation"><i class="fas fa-map-marker-alt"></i><input type="text"
+                    placeholder="Paris, Belleville"></div>
+            <div class="explore">
+                <div class="explore__title">
+                    <h2>Réservez le menu qui vous convient</h2>
+                </div>
+                <div class="explore__text">Découvrez des restaurants d'exception, séléctionnés par nos soins.</div>
+                <a href="#Restaurants" class="btn">Explorer nos restaurants</a>
+            </div>
+        </section>
 
-    <section class="fonction-container">
-        <div class="fonction-containe__title"><h2>Fonctionnement</h2></div>
-        <div class="fonction-container__list">
-            <div class="fonction">
-                <div class="fonction__number">1</div>
-                <div class="fonction__icon"><i class="fas fa-mobile-alt"></i></div>
-                <div class="fonction__text">Choisissez un restaurants</div>
+        <section class="fonction-container">
+            <div class="fonction-containe__title">
+                <h2>Fonctionnement</h2>
             </div>
-            <div class="fonction">
-                <div class="fonction__number">2</div>
-                <div class="fonction__icon"><i class="fas fa-list-ul"></i></div>
-                <div class="fonction__text">Composez votre menu</div>
+            <div class="fonction-container__list">
+                <div class="fonction">
+                    <div class="fonction__number">1</div>
+                    <div class="fonction__icon"><i class="fas fa-mobile-alt"></i></div>
+                    <div class="fonction__text">Choisissez un restaurants</div>
+                </div>
+                <div class="fonction">
+                    <div class="fonction__number">2</div>
+                    <div class="fonction__icon"><i class="fas fa-list-ul"></i></div>
+                    <div class="fonction__text">Composez votre menu</div>
+                </div>
+                <div class="fonction">
+                    <div class="fonction__number">3</div>
+                    <div class="fonction__icon"><i class="fas fa-store"></i></div>
+                    <div class="fonction__text">Dégustez au restaurant</div>
+                </div>
             </div>
-            <div class="fonction">
-                <div class="fonction__number">3</div>
-                <div class="fonction__icon"><i class="fas fa-store"></i></div>
-                <div class="fonction__text">Dégustez au restaurant</div>
+        </section>
+        <section class="restaurants-container" id="Restaurants">
+            <div class="restaurants-container__title">
+                <h2>Restaurants</h2>
             </div>
-        </div>
-    </section>
-    <section class="restaurants-container" id="Restaurants">
-        <div class="restaurants-container__title"><h2>Restaurants</h2></div>
-        <div class="restaurants-container__list">
-            <a href="restaurant_menilmontant.html" class="restaurant">
-                <div class="restaurant__photo menilmontant"><div class="restaurant__photo--new">Nouveau</div></div>
-                <div class="restaurant__text">
-                    <div class="restaurant__name">
-                        <div class="restaurant__title">La palette du goût</div>
-                        <div class="restaurant__localisation">Ménilmontant</div>
+            <div class="restaurants-container__list">
+                <a href="restaurant_menilmontant.html" class="restaurant">
+                    <div class="restaurant__photo menilmontant">
+                        <div class="restaurant__photo--new">Nouveau</div>
                     </div>
-                    <div class="restaurant__heart"><i class="far fa-heart"></i></div>
-                </div>
-            </a>
-            <a href="restaurant_charonne.html" class="restaurant">
-                <div class="restaurant__photo charonne"><div class="restaurant__photo--new">Nouveau</div></div>
-                <div class="restaurant__text">
-                    <div class="restaurant__name">
-                        <div class="restaurant__title">La note enchantée</div>
-                        <div class="restaurant__localisation">Charonne</div>
+                    <div class="restaurant__text">
+                        <div class="restaurant__name">
+                            <div class="restaurant__title">La palette du goût</div>
+                            <div class="restaurant__localisation">Ménilmontant</div>
+                        </div>
+                        <div class="restaurant__heart"><i class="far fa-heart"></i></div>
                     </div>
-                    <div class="restaurant__heart"></div>
-                </div>
-                
-            </a>
-            <a href="restaurant_citerouge.html"  class="restaurant">
-                <div class="restaurant__photo cite-rouge"></div>
-                <div class="restaurant__text">
-                    <div class="restaurant__name">
-                        <div class="restaurant__title">À la française</div>
-                        <div class="restaurant__localisation">Cité Rouge</div>
+                </a>
+                <a href="restaurant_charonne.html" class="restaurant">
+                    <div class="restaurant__photo charonne">
+                        <div class="restaurant__photo--new">Nouveau</div>
                     </div>
-                    <div class="restaurant__heart"><i class="far fa-heart"></i><i class="fas fa-heart"></i></div>
-                </div>
-            </a>
-            <a href="restaurant_foliemericourt.html" class="restaurant">
-                <div class="restaurant__photo folie-mericourt"></div>
-                <div class="restaurant__text">
-                    <div class="restaurant__name">
-                        <div class="restaurant__title">Le délice des sens</div>
-                        <div class="restaurant__localisation">Folie-Méricourt</div>
+                    <div class="restaurant__text">
+                        <div class="restaurant__name">
+                            <div class="restaurant__title">La note enchantée</div>
+                            <div class="restaurant__localisation">Charonne</div>
+                        </div>
+                        <div class="restaurant__heart"></div>
                     </div>
-                    <div class="restaurant__heart"><i class="far fa-heart"></i></div>
-                </div>
-            </a>
-        </div>
 
-    </section>
-
-    <footer>
-        <div class="footer-container">
-            <div class="footer-container__logo">ohmyfood</div>
-            <div class="footer-container__list">
-                <ul>
-                    <li><a href="#"><i class="fas fa-utensils"></i>Proposer un restaurant</a></li>
-                    <li><a href="#"><i class="fas fa-hands-helping"></i>Devenir partenaire</a></li>
-                    <li><a href="#">Mentions légales</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
+                </a>
+                <a href="restaurant_citerouge.html" class="restaurant">
+                    <div class="restaurant__photo cite-rouge"></div>
+                    <div class="restaurant__text">
+                        <div class="restaurant__name">
+                            <div class="restaurant__title">À la française</div>
+                            <div class="restaurant__localisation">Cité Rouge</div>
+                        </div>
+                        <div class="restaurant__heart"><i class="far fa-heart"></i><i class="fas fa-heart"></i></div>
+                    </div>
+                </a>
+                <a href="restaurant_foliemericourt.html" class="restaurant">
+                    <div class="restaurant__photo folie-mericourt"></div>
+                    <div class="restaurant__text">
+                        <div class="restaurant__name">
+                            <div class="restaurant__title">Le délice des sens</div>
+                            <div class="restaurant__localisation">Folie-Méricourt</div>
+                        </div>
+                        <div class="restaurant__heart"><i class="far fa-heart"></i></div>
+                    </div>
+                </a>
             </div>
-        </div>
-    </footer>
+
+        </section>
+
+        <footer>
+            <div class="footer-container">
+                <div class="footer-container__logo">ohmyfood</div>
+                <div class="footer-container__list">
+                    <ul>
+                        <li><a href="#"><i class="fas fa-utensils"></i>Proposer un restaurant</a></li>
+                        <li><a href="#"><i class="fas fa-hands-helping"></i>Devenir partenaire</a></li>
+                        <li><a href="#">Mentions légales</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </div>
 </body>
 
 </html>

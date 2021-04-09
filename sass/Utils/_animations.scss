@@ -1,3 +1,17 @@
 @keyframes loading{
-    
+    0%{
+        transform: scaleY(0);
+    }
+    100%{
+        transform: scaleY(1);
+    }
+}
+
+@keyframes show-content{
+    0%{
+        transform: translateY(positionY($height,$margin));
+    }
+    100%{
+        transform: translateY(positionY($height,$margin));
+    }
 }
