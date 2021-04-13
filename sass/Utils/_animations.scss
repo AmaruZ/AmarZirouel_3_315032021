@@ -9,9 +9,9 @@
 
 @keyframes show-content{
     0%{
-        transform: translateY(positionY($height,$margin));
+        transform: translateY(0);
     }
     100%{
-        transform: translateY(positionY($height,$margin));
+        transform: translateY(0);
     }
 }

@@ -1,4 +1,4 @@
-.loader{
+.loader {
     width: 200px;
     height: $height;
     margin-top: $margin;
@@ -7,41 +7,41 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    &__bar{
+    &__bar {
         width: 40px;
         height: 150px;
         background: $color-primary;
-        animation: loading 1s both alternate-reverse 3;
+        //animation: loading 1s both alternate-reverse 3;
         @for $i from 1 through 3 {
             &--#{$i} {
                 animation-delay: $anim-delay * $i;
             }
         }
-
     }
 }
 
-.content{
+.content {
+    position: absolute;
+    top: 0;
     transform: translateY(-10000px);
     animation: show-content 2s infinite;
-    animation-delay: 3.8s;
+    // animation-delay: 3.8s;
     width: 100%;
 }
 
-
-.explore{
+.explore {
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: $color-lightgrey;
     padding-top: 40px;
     padding-bottom: 55px;
-    &__title{
+    &__title {
         width: 70%;
         text-align: center;
         padding-bottom: 10px;
     }
-    &__text{
+    &__text {
         width: 80%;
         text-align: center;
         font-weight: 300;
@@ -50,61 +50,58 @@
     }
 }
 
-.fonction-container{
+.fonction-container {
     margin-left: 20px;
     padding-top: 30px;
 
-    &__list{
+    &__list {
         margin-top: 30px;
     }
-
 }
 
-
-.localisation{
+.localisation {
     background-color: lighten($color: $color-grey, $amount: 70%);
     display: flex;
     justify-content: center;
     align-items: center;
     height: 50px;
-    i{
+    i {
         color: $color-grey;
     }
-    input{
+    input {
         background-color: lighten($color: $color-grey, $amount: 70%);
         color: $color-grey;
         border: none;
-        font-family: 'Roboto', sans-serif;
+        font-family: "Roboto", sans-serif;
         font-weight: 600;
         margin-left: 15px;
     }
 }
 
-.restaurants-container{
+.restaurants-container {
     background-color: $color-lightgrey;
     margin-top: 50px;
     padding-top: 50px;
-    &__list{
+    &__list {
         display: flex;
-    flex-direction: column;}
-
+        flex-direction: column;
+    }
 }
 
-.restaurant{
+.restaurant {
     height: 25rem;
-    background-color: #FFF;
+    background-color: #fff;
     margin-bottom: 15px;
     width: 33.5rem;
     margin-left: auto;
     margin-right: auto;
     border-radius: 20px;
     @include shadow;
-    &__photo{
-        
+    &__photo {
         height: 70%;
         border-top-left-radius: 20px;
         border-top-right-radius: 20px;
-        &--new{
+        &--new {
             background-color: $color-tertiary;
             width: 80px;
             height: 30px;
@@ -119,79 +116,67 @@
             font-weight: 600;
         }
     }
-    &__text{
+    &__text {
         display: flex;
         justify-content: space-between;
         margin-left: 1.5rem;
         margin-right: 2.5rem;
         height: 30%;
         align-items: center;
-
     }
-    &__title{
+    &__title {
         font-weight: 700;
     }
-    &__heart{
 
-        //font-size: 2rem;
-        fill: transparent;
-        text-shadow: 0px 0px 1px #000;
-       // transform:scaleY(1);
+}
 
-        overflow: hidden;
-        /*&::before{
-            content: "";
-            
-            width: 100px;
-            height: 100px;
-            
-            border-radius: 40%;
+.heart{
+    
+    &__animated{
+        font-size: 2.6rem;
+        &:hover::before {
+            opacity: 1;
+            transition: all 1s;
+        }
+        &::before {
+            color: transparent;
             position: absolute;
-            animation: fill 7s ease-in-out infinite;
-            z-index: -1;
-
-
+            -webkit-background-clip: text;
+            opacity: 0;
+            transform: translate(0.34rem, -2.3rem);
+            background-image: linear-gradient(to bottom left, $color-primary 20%, $color-secondary);
         }
 
-
-        &:hover{
-            transform: scaleY(1);
-            transition: transform;
-
-
-        }*/
-
-
-        
+    }
+    &__visible{
+        font-size: 2.5rem;
+        -webkit-text-stroke: 0.9px white;
+        //text-shadow: 0px 0px 1px black;
+        //color: white;
     }
 
+
+    
 }
 
-
-.menilmontant{
+.menilmontant {
     background: center/cover no-repeat url("/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
-
 }
-.charonne{
+.charonne {
     background: center/cover no-repeat url("/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
-
 }
-.cite-rouge{
+.cite-rouge {
     background: center/cover no-repeat url("/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
-
 }
-.folie-mericourt{
+.folie-mericourt {
     background: center/cover no-repeat url("/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
-
 }
 
-
-.resto-name{
+.resto-name {
     height: 30rem;
     display: flex;
 
-
-    &__title{
+    &__title {
         display: flex;
         background: $color-lightgrey;
         justify-content: space-between;
@@ -206,26 +191,26 @@
     }
 }
 
-.plats, .entrees, .desserts{
+.plats,
+.entrees,
+.desserts {
     display: flex;
     flex-direction: column;
     background-color: $color-lightgrey;
-    
 
-    &__title{
+    &__title {
         text-transform: uppercase;
         margin-bottom: 2.5rem;
         padding-left: 1.5rem;
-        
     }
-    &__list{
+    &__list {
         display: flex;
         flex-direction: column;
         margin-left: auto;
         margin-right: auto;
         width: 95%;
     }
-    &__underline{
+    &__underline {
         margin-top: 5px;
         height: 3px;
         width: 4rem;
@@ -233,8 +218,8 @@
     }
 }
 
-.plat{
-    background-color: #FFF;
+.plat {
+    background-color: #fff;
     display: flex;
     flex-direction: row;
     width: 35rem;
@@ -244,32 +229,30 @@
     margin-bottom: 1.2rem;
     overflow: hidden;
 
-
-    &__text{
+    &__text {
         margin: 1.5rem 0 1.5rem 1rem;
         width: 26rem;
     }
 
-    &__name{
+    &__name {
         font-weight: 700;
         margin-bottom: 0.5rem;
-        
     }
-    &__descrp{
+    &__descrp {
         overflow: hidden;
         white-space: nowrap;
 
         height: 1.5rem;
         text-overflow: ellipsis;
     }
-    &__price{
+    &__price {
         font-weight: 500;
         align-self: flex-end;
         text-align: center;
         width: 7rem;
         margin-bottom: 1.5rem;
     }
-    &__checked{
+    &__checked {
         background: $color-tertiary;
         height: 6.8rem;
         width: 6rem;
@@ -280,34 +263,32 @@
         transform: translateX(6rem);
     }
 
-    .fas{
+    .fas {
         font-size: 2.2rem;
         color: white;
         transform: rotate(0);
     }
-    &:hover &__checked{
+    &:hover &__checked {
         transform: translateX(0);
         margin-left: 0;
         transition: all 1s;
     }
 
-    &:hover .fas{
+    &:hover .fas {
         transform: rotate(1turn);
         transition: transform 1s;
     }
-    &:hover &__text{
+    &:hover &__text {
         width: 21rem;
         transition: all 1s;
     }
-
 }
 
-.btn-container{
+.btn-container {
     background: $color-lightgrey;
     display: flex;
     justify-content: center;
     align-items: center;
     padding-top: 3rem;
     padding-bottom: 4rem;
-
 }
