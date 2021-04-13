@@ -1,7 +1,7 @@
 .btn{
     font-family: 'Roboto', sans-serif;
     background: linear-gradient(to top left, $color-primary ,$color-secondary);
-    height: 50px;
+    height: 5rem;
     border-radius: 50px;
     color: white;
 	display:inline-block;
@@ -15,14 +15,15 @@
 }
 
 .fonction{
-    height: 75px;
+    height: 7.3rem;
     display: flex;
     align-items: center;
     background-color: lighten($color: $color-grey, $amount: 75%);
-    @include shadow;
+    @include shadow(#ddd);
     border-radius: 20px;
     margin-bottom: 20px;
     margin-right: 20px;
+    padding-top: 0.5rem;
 
     &__number{
         display:flex;
@@ -30,6 +31,7 @@
         align-items: center;
         height: 25px;
         width: 25px;
+        padding-top: 0.3rem;
         background-color: $color-primary;
         color: white;
         border-radius: 50%;
@@ -39,12 +41,14 @@
         color: $color-grey;
         margin-left: 30px;
         margin-right: 20px;
+        font-size: 1.9rem;
         :hover > &{
             color: $color-primary;
         }
     }
     &__text{
         font-weight: 500;
+        font-size: 1.6rem;
 
     }
 

@@ -11,7 +11,7 @@
         width: 40px;
         height: 150px;
         background: $color-primary;
-        //animation: loading 1s both alternate-reverse 3;
+        animation: loading 0s both alternate-reverse 3;
         @for $i from 1 through 3 {
             &--#{$i} {
                 animation-delay: $anim-delay * $i;
@@ -34,8 +34,8 @@
     flex-direction: column;
     align-items: center;
     background-color: $color-lightgrey;
-    padding-top: 40px;
-    padding-bottom: 55px;
+    padding-top: 4rem;
+    padding-bottom: 5.5rem;
     &__title {
         width: 70%;
         text-align: center;
@@ -47,6 +47,7 @@
         font-weight: 300;
         color: $color-grey;
         padding-bottom: 20px;
+        font-size: 1.6rem;
     }
 }
 
@@ -62,9 +63,10 @@
 .localisation {
     background-color: lighten($color: $color-grey, $amount: 70%);
     display: flex;
-    justify-content: center;
     align-items: center;
-    height: 50px;
+    justify-content: center;
+    height: 5rem;
+    padding-left: 4rem;
     i {
         color: $color-grey;
     }
@@ -75,6 +77,10 @@
         font-family: "Roboto", sans-serif;
         font-weight: 600;
         margin-left: 15px;
+        font-size: 1.5rem;
+        &::placeholder{
+            color: #3E3E3E;
+        }
     }
 }
 
@@ -82,9 +88,14 @@
     background-color: $color-lightgrey;
     margin-top: 50px;
     padding-top: 50px;
+    &__title{
+        margin-left: 2rem;
+    }
     &__list {
         display: flex;
         flex-direction: column;
+        margin-top: 2rem;
+        margin-bottom: 5rem;
     }
 }
 
@@ -97,22 +108,26 @@
     margin-right: auto;
     border-radius: 20px;
     @include shadow;
-    &__photo {
+    &__visu{
         height: 70%;
+    }
+    &__photo {
+        height: 100%;
+        width: 100%;
         border-top-left-radius: 20px;
         border-top-right-radius: 20px;
+        object-fit: cover;
         &--new {
             background-color: $color-tertiary;
             width: 80px;
             height: 30px;
             color: darken($color: $color-tertiary, $amount: 40%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            display: grid;
+            place-items: center;
             border-radius: 3px;
             position: relative;
             left: 24.5rem;
-            top: 1rem;
+            top: -16.5rem;
             font-weight: 600;
         }
     }
@@ -133,7 +148,7 @@
 .heart{
     
     &__animated{
-        font-size: 2.6rem;
+        font-size: 2.5rem;
         &:hover::before {
             opacity: 1;
             transition: all 1s;
@@ -143,10 +158,9 @@
             position: absolute;
             -webkit-background-clip: text;
             opacity: 0;
-            transform: translate(0.34rem, -2.3rem);
+            transform: translate(0.33rem, -2.25rem);
             background-image: linear-gradient(to bottom left, $color-primary 20%, $color-secondary);
         }
-
     }
     &__visible{
         font-size: 2.5rem;
@@ -159,24 +173,24 @@
     
 }
 
-.menilmontant {
-    background: center/cover no-repeat url("/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
-}
-.charonne {
-    background: center/cover no-repeat url("/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
-}
-.cite-rouge {
-    background: center/cover no-repeat url("/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
-}
-.folie-mericourt {
-    background: center/cover no-repeat url("/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
-}
 
 .resto-name {
     height: 30rem;
     display: flex;
 
+    &__photo{
+        width: 100%;
+        
+        object-fit: cover;
+        &--charonne{
+            object-position: 0rem -9rem;
+
+        }
+
+    }
+
     &__title {
+        position: absolute;
         display: flex;
         background: $color-lightgrey;
         justify-content: space-between;
@@ -200,14 +214,16 @@
 
     &__title {
         text-transform: uppercase;
-        margin-bottom: 2.5rem;
+        margin-bottom: 1.5rem;
         padding-left: 1.5rem;
+        font-size: 1.6rem;
     }
     &__list {
         display: flex;
         flex-direction: column;
         margin-left: auto;
         margin-right: auto;
+        margin-bottom: 2rem;
         width: 95%;
     }
     &__underline {
@@ -230,19 +246,23 @@
     overflow: hidden;
 
     &__text {
-        margin: 1.5rem 0 1.5rem 1rem;
+        margin: 1.2rem 0 1.5rem 1rem;
         width: 26rem;
     }
 
     &__name {
+        overflow: hidden;
+        white-space: nowrap;
         font-weight: 700;
-        margin-bottom: 0.5rem;
+        font-size: 1.7rem;
+        margin-bottom: 0.3rem;
+        text-overflow: ellipsis;
     }
     &__descrp {
         overflow: hidden;
         white-space: nowrap;
-
-        height: 1.5rem;
+        font-size: 1.45rem;
+        height: 1.8rem;
         text-overflow: ellipsis;
     }
     &__price {

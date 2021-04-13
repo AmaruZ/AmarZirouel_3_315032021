@@ -39,7 +39,7 @@ html {
 }
 
 body {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
 }
 
 h1 {
@@ -50,17 +50,18 @@ h1 {
 
 h2 {
   font-weight: 700;
+  font-size: 2.2rem;
 }
 
 .btn {
   font-family: 'Roboto', sans-serif;
   background: linear-gradient(to top left, #9356DC, #FF79DA);
-  height: 50px;
+  height: 5rem;
   border-radius: 50px;
   color: white;
   display: inline-block;
   padding: 16px 30px;
-  box-shadow: 0px 5px 10px 0px #acacac;
+  box-shadow: 0px 4px 10px 0px #c4c4c4;
 }
 
 .btn:hover {
@@ -68,14 +69,15 @@ h2 {
 }
 
 .fonction {
-  height: 75px;
+  height: 7.3rem;
   display: flex;
   align-items: center;
   background-color: #f4f4f4;
-  box-shadow: 0px 5px 10px 0px #acacac;
+  box-shadow: 0px 4px 10px 0px #ddd;
   border-radius: 20px;
   margin-bottom: 20px;
   margin-right: 20px;
+  padding-top: 0.5rem;
 }
 
 .fonction__number {
@@ -84,6 +86,7 @@ h2 {
   align-items: center;
   height: 25px;
   width: 25px;
+  padding-top: 0.3rem;
   background-color: #9356DC;
   color: white;
   border-radius: 50%;
@@ -94,6 +97,7 @@ h2 {
   color: #353535;
   margin-left: 30px;
   margin-right: 20px;
+  font-size: 1.9rem;
 }
 
 :hover > .fonction__icon {
@@ -102,6 +106,7 @@ h2 {
 
 .fonction__text {
   font-weight: 500;
+  font-size: 1.6rem;
 }
 
 .fonction:hover {
@@ -111,9 +116,10 @@ h2 {
 header {
   display: flex;
   align-items: center;
+  position: relative;
   width: 100%;
   height: 62px;
-  box-shadow: 0px 5px 10px 0px #acacac;
+  box-shadow: 0px 4px 5px 0px #c4c4c4;
 }
 
 header .logo {
@@ -143,6 +149,7 @@ footer {
 
 .footer-container__logo {
   font-family: 'Shrikhand', cursive;
+  font-size: 1.8rem;
 }
 
 .footer-container__list {
@@ -176,6 +183,7 @@ footer {
   width: 40px;
   height: 150px;
   background: #9356DC;
+  animation: loading 0s both alternate-reverse 3;
 }
 
 .loader__bar--1 {
@@ -203,8 +211,8 @@ footer {
   flex-direction: column;
   align-items: center;
   background-color: #F6F6F6;
-  padding-top: 40px;
-  padding-bottom: 55px;
+  padding-top: 4rem;
+  padding-bottom: 5.5rem;
 }
 
 .explore__title {
@@ -219,6 +227,7 @@ footer {
   font-weight: 300;
   color: #353535;
   padding-bottom: 20px;
+  font-size: 1.6rem;
 }
 
 .fonction-container {
@@ -233,9 +242,10 @@ footer {
 .localisation {
   background-color: #e8e8e8;
   display: flex;
-  justify-content: center;
   align-items: center;
-  height: 50px;
+  justify-content: center;
+  height: 5rem;
+  padding-left: 4rem;
 }
 
 .localisation i {
@@ -249,6 +259,11 @@ footer {
   font-family: "Roboto", sans-serif;
   font-weight: 600;
   margin-left: 15px;
+  font-size: 1.5rem;
+}
+
+.localisation input::placeholder {
+  color: #3E3E3E;
 }
 
 .restaurants-container {
@@ -257,9 +272,15 @@ footer {
   padding-top: 50px;
 }
 
+.restaurants-container__title {
+  margin-left: 2rem;
+}
+
 .restaurants-container__list {
   display: flex;
   flex-direction: column;
+  margin-top: 2rem;
+  margin-bottom: 5rem;
 }
 
 .restaurant {
@@ -270,13 +291,19 @@ footer {
   margin-left: auto;
   margin-right: auto;
   border-radius: 20px;
-  box-shadow: 0px 5px 10px 0px #acacac;
+  box-shadow: 0px 4px 10px 0px #c4c4c4;
+}
+
+.restaurant__visu {
+  height: 70%;
 }
 
 .restaurant__photo {
-  height: 70%;
+  height: 100%;
+  width: 100%;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
+  object-fit: cover;
 }
 
 .restaurant__photo--new {
@@ -284,13 +311,12 @@ footer {
   width: 80px;
   height: 30px;
   color: #278870;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  place-items: center;
   border-radius: 3px;
   position: relative;
   left: 24.5rem;
-  top: 1rem;
+  top: -16.5rem;
   font-weight: 600;
 }
 
@@ -308,7 +334,7 @@ footer {
 }
 
 .heart__animated {
-  font-size: 2.6rem;
+  font-size: 2.5rem;
 }
 
 .heart__animated:hover::before {
@@ -321,7 +347,7 @@ footer {
   position: absolute;
   -webkit-background-clip: text;
   opacity: 0;
-  transform: translate(0.34rem, -2.3rem);
+  transform: translate(0.33rem, -2.25rem);
   background-image: linear-gradient(to bottom left, #9356DC 20%, #FF79DA);
 }
 
@@ -330,28 +356,22 @@ footer {
   -webkit-text-stroke: 0.9px white;
 }
 
-.menilmontant {
-  background: center/cover no-repeat url("/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
-}
-
-.charonne {
-  background: center/cover no-repeat url("/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
-}
-
-.cite-rouge {
-  background: center/cover no-repeat url("/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
-}
-
-.folie-mericourt {
-  background: center/cover no-repeat url("/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
-}
-
 .resto-name {
   height: 30rem;
   display: flex;
 }
 
+.resto-name__photo {
+  width: 100%;
+  object-fit: cover;
+}
+
+.resto-name__photo--charonne {
+  object-position: 0rem -9rem;
+}
+
 .resto-name__title {
+  position: absolute;
   display: flex;
   background: #F6F6F6;
   justify-content: space-between;
@@ -377,8 +397,9 @@ footer {
 .entrees__title,
 .desserts__title {
   text-transform: uppercase;
-  margin-bottom: 2.5rem;
+  margin-bottom: 1.5rem;
   padding-left: 1.5rem;
+  font-size: 1.6rem;
 }
 
 .plats__list,
@@ -388,6 +409,7 @@ footer {
   flex-direction: column;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 2rem;
   width: 95%;
 }
 
@@ -406,26 +428,31 @@ footer {
   flex-direction: row;
   width: 35rem;
   height: 6.8rem;
-  box-shadow: 0px 5px 10px 0px #acacac;
+  box-shadow: 0px 4px 10px 0px #c4c4c4;
   border-radius: 1.2rem;
   margin-bottom: 1.2rem;
   overflow: hidden;
 }
 
 .plat__text {
-  margin: 1.5rem 0 1.5rem 1rem;
+  margin: 1.2rem 0 1.5rem 1rem;
   width: 26rem;
 }
 
 .plat__name {
+  overflow: hidden;
+  white-space: nowrap;
   font-weight: 700;
-  margin-bottom: 0.5rem;
+  font-size: 1.7rem;
+  margin-bottom: 0.3rem;
+  text-overflow: ellipsis;
 }
 
 .plat__descrp {
   overflow: hidden;
   white-space: nowrap;
-  height: 1.5rem;
+  font-size: 1.45rem;
+  height: 1.8rem;
   text-overflow: ellipsis;
 }
 
