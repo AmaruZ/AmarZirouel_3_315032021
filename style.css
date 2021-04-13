@@ -18,6 +18,17 @@
   }
 }
 
+@keyframes show-dishes {
+  0% {
+    transform: translateY(5rem);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -362,8 +373,8 @@ footer {
 }
 
 .resto-name__photo {
-  width: 100%;
   object-fit: cover;
+  width: 100%;
 }
 
 .resto-name__photo--charonne {
@@ -432,6 +443,47 @@ footer {
   border-radius: 1.2rem;
   margin-bottom: 1.2rem;
   overflow: hidden;
+  animation: show-dishes 1s;
+}
+
+.plat--1 {
+  animation-delay: 100ms;
+}
+
+.plat--2 {
+  animation-delay: 200ms;
+}
+
+.plat--3 {
+  animation-delay: 300ms;
+}
+
+.plat--4 {
+  animation-delay: 400ms;
+}
+
+.plat--5 {
+  animation-delay: 500ms;
+}
+
+.plat--6 {
+  animation-delay: 600ms;
+}
+
+.plat--7 {
+  animation-delay: 700ms;
+}
+
+.plat--8 {
+  animation-delay: 800ms;
+}
+
+.plat--9 {
+  animation-delay: 900ms;
+}
+
+.plat--10 {
+  animation-delay: 1000ms;
 }
 
 .plat__text {
