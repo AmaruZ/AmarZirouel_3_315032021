@@ -77,6 +77,8 @@ h2 {
 
 .btn:hover {
   filter: brightness(110%);
+  box-shadow: 0px 4px 20px 0px #727272;
+  transition: all 0.2s;
 }
 
 .fonction {
@@ -281,6 +283,7 @@ footer {
   background-color: #F6F6F6;
   margin-top: 50px;
   padding-top: 50px;
+  padding-bottom: 5rem;
 }
 
 .restaurants-container__title {
@@ -291,7 +294,6 @@ footer {
   display: flex;
   flex-direction: column;
   margin-top: 2rem;
-  margin-bottom: 5rem;
 }
 
 .restaurant {
@@ -355,16 +357,17 @@ footer {
 
 .heart__animated::before {
   color: transparent;
-  position: absolute;
+  position: relative;
   -webkit-background-clip: text;
   opacity: 0;
-  transform: translate(0.33rem, -2.25rem);
   background-image: linear-gradient(to bottom left, #9356DC 20%, #FF79DA);
 }
 
 .heart__visible {
   font-size: 2.5rem;
   -webkit-text-stroke: 0.9px white;
+  position: relative;
+  right: -2.9rem;
 }
 
 .resto-name {
@@ -418,10 +421,8 @@ footer {
 .desserts__list {
   display: flex;
   flex-direction: column;
-  margin-left: auto;
-  margin-right: auto;
   margin-bottom: 2rem;
-  width: 95%;
+  width: 100%;
 }
 
 .plats__underline,
@@ -437,6 +438,8 @@ footer {
   background-color: #fff;
   display: flex;
   flex-direction: row;
+  margin-left: auto;
+  margin-right: auto;
   width: 35rem;
   height: 6.8rem;
   box-shadow: 0px 4px 10px 0px #c4c4c4;
