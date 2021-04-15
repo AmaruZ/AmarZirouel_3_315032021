@@ -7,16 +7,21 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    &__bar {
-        width: 40px;
-        height: 150px;
-        background: $color-primary;
-        animation: loading 0s both alternate-reverse 3;
-        @for $i from 1 through 3 {
-            &--#{$i} {
-                animation-delay: $anim-delay * $i;
-            }
-        }
+    border-radius: 50%;
+    border: 5px solid $color-primary;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    animation: spinner 2s 1.5 linear, fadeout 1ms 3s 1 forwards;
+    &::before {
+        content: "";
+        position: absolute;
+        width: 160px;
+        height: 160px;
+        border-radius: 50%;
+        border: 5px solid $color-secondary;
+        border-top-color: transparent;
+        border-right-color: transparent;
+        animation: spinner 1s 3 reverse linear, fadeout 1ms 3s 1 forwards;
     }
 }
 
@@ -24,8 +29,8 @@
     position: absolute;
     top: 0;
     transform: translateY(-10000px);
-    animation: show-content 2s infinite;
-    // animation-delay: 3.8s;
+    animation: show-content 100ms 1 forwards;
+    animation-delay: 3050ms;
     width: 100%;
 }
 
@@ -78,8 +83,8 @@
         font-weight: 600;
         margin-left: 15px;
         font-size: 1.5rem;
-        &::placeholder{
-            color: #3E3E3E;
+        &::placeholder {
+            color: #3e3e3e;
         }
     }
 }
@@ -89,13 +94,13 @@
     margin-top: 50px;
     padding-top: 50px;
     padding-bottom: 5rem;
-    &__title{
+    &__title {
         margin-left: 2rem;
     }
     &__list {
         display: flex;
         flex-direction: column;
-        margin-top: 2rem;;
+        margin-top: 2rem;
     }
 }
 
@@ -103,13 +108,15 @@
     height: 25rem;
     background-color: #fff;
     margin-bottom: 15px;
-    width: 33.5rem;
+    min-width: 33.5rem;
+    width: 90%;
     margin-left: auto;
     margin-right: auto;
     border-radius: 20px;
     @include shadow;
-    &__visu{
+    &__visu {
         height: 70%;
+        position: relative;
     }
     &__photo {
         height: 100%;
@@ -125,9 +132,10 @@
             display: grid;
             place-items: center;
             border-radius: 3px;
-            position: relative;
-            left: 24.5rem;
-            top: -16.5rem;
+            position: absolute;
+            right: 0;
+            margin-top: -16.5rem;
+            margin-right: 2rem;
             font-weight: 600;
         }
     }
@@ -142,12 +150,10 @@
     &__title {
         font-weight: 700;
     }
-
 }
 
-.heart{
-    
-    &__animated{
+.heart {
+    &__animated {
         font-size: 2.5rem;
         &:hover::before {
             opacity: 1;
@@ -161,7 +167,7 @@
             background-image: linear-gradient(to bottom left, $color-primary 20%, $color-secondary);
         }
     }
-    &__visible{
+    &__visible {
         font-size: 2.5rem;
         -webkit-text-stroke: 0.9px white;
         position: relative;
@@ -169,20 +175,17 @@
         //text-shadow: 0px 0px 1px black;
         //color: white;
     }
-
-
-    
 }
-
 
 .resto-name {
     height: 30rem;
     display: flex;
+    position: absolute;
 
-    &__photo{
+    &__photo {
         object-fit: cover;
         width: 100%;
-        &--charonne{
+        &--charonne {
             object-position: 0rem -9rem;
         }
     }
@@ -209,7 +212,6 @@
     display: flex;
     flex-direction: column;
     background-color: $color-lightgrey;
-
 
     &__title {
         text-transform: uppercase;
@@ -244,14 +246,11 @@
     margin-bottom: 1.2rem;
     overflow: hidden;
     @for $dishes from 1 through 10 {
-        &--#{$dishes}{
+        &--#{$dishes} {
             animation-delay: $dishes-delay * $dishes;
         }
-        
     }
     animation: show-dishes 1s;
-
-    
 
     &__text {
         margin: 1.2rem 0 1.5rem 1rem;
