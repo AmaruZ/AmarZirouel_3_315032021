@@ -1,5 +1,5 @@
 .loader {
-    width: 200px;
+    width: 80px;
     height: $height;
     margin-top: $margin;
     margin-left: auto;
@@ -15,8 +15,8 @@
     &::before {
         content: "";
         position: absolute;
-        width: 160px;
-        height: 160px;
+        width: 55px;
+        height: 55px;
         border-radius: 50%;
         border: 5px solid $color-secondary;
         border-top-color: transparent;
@@ -49,9 +49,9 @@
     &__text {
         width: 80%;
         text-align: center;
-        font-weight: 300;
         color: $color-grey;
         padding-bottom: 20px;
+        font-weight: 300;
         font-size: 1.6rem;
     }
 }
@@ -67,9 +67,7 @@
 
 .localisation {
     background-color: lighten($color: $color-grey, $amount: 70%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include centerflex;
     height: 5rem;
     padding-left: 4rem;
     i {
@@ -180,7 +178,13 @@
 .resto-name {
     height: 30rem;
     display: flex;
-    position: absolute;
+    position: relative;
+    @include media-query(desktop){
+        border-bottom-left-radius: 3.3rem;
+        border-bottom-right-radius: 3.3rem;
+        margin-bottom: 2rem;
+        overflow: hidden;
+    }
 
     &__photo {
         object-fit: cover;
@@ -212,18 +216,35 @@
     display: flex;
     flex-direction: column;
     background-color: $color-lightgrey;
+    @include media-query(desktop){
+        border-radius: 3.3rem;
+        margin-bottom: 2rem;
+        overflow: hidden;
+        
+    }
+    
 
     &__title {
         text-transform: uppercase;
         margin-bottom: 1.5rem;
         padding-left: 1.5rem;
-        font-size: 1.6rem;
+        @include media-query(desktop){
+            margin-top: 2rem;
+        }
+        
     }
     &__list {
         display: flex;
         flex-direction: column;
         margin-bottom: 2rem;
-        width: 100%;
+        width: 95%;
+        @include media-query(desktop){
+            flex-flow: row wrap;
+            justify-content: flex-start;
+            margin-left: auto;
+            margin-right: auto;
+            
+        }
     }
     &__underline {
         margin-top: 5px;
@@ -239,7 +260,7 @@
     flex-direction: row;
     margin-left: auto;
     margin-right: auto;
-    width: 35rem;
+    width: $width-dish;
     height: 6.8rem;
     @include shadow;
     border-radius: 1.2rem;
@@ -251,10 +272,18 @@
         }
     }
     animation: show-dishes 1s;
+    @include media-query(desktop){
+        width: $width-dish;
+        margin-left: 3rem;
+        margin-right: 0rem;
+    }
 
     &__text {
         margin: 1.2rem 0 1.5rem 1rem;
-        width: 26rem;
+        width: calc(#{$width-dish} + -#{$width-price});
+        @include media-query(desktop){
+            width: calc(#{$width-dish} + -#{$width-price});
+        }
     }
 
     &__name {
@@ -276,17 +305,15 @@
         font-weight: 500;
         align-self: flex-end;
         text-align: center;
-        width: 7rem;
+        width: $width-price;
         margin-bottom: 1.5rem;
     }
     &__checked {
         background: $color-tertiary;
         height: 6.8rem;
-        width: 6rem;
+        width: $width-checked;
         margin-left: -5rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        @include centerflex;
         transform: translateX(6rem);
     }
 
@@ -306,16 +333,17 @@
         transition: transform 1s;
     }
     &:hover &__text {
-        width: 21rem;
+        width: 55%;
         transition: all 1s;
+        @include media-query(desktop){
+            width: 65%;
+        }
     }
 }
 
 .btn-container {
     background: $color-lightgrey;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include centerflex;
     padding-top: 3rem;
     padding-bottom: 4rem;
 }

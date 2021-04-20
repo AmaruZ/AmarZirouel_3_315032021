@@ -15,12 +15,19 @@ footer{
     }
     &__list{
         margin-top: 10px;
+
+        ul{
+            @include media-query(desktop){
+                display: flex;
+            }
+        }
         
         a {
             color:white;
         }
         li{
             margin-top: 10px;
+            margin-right: 2rem;
         }
         i{
             width: 30px;

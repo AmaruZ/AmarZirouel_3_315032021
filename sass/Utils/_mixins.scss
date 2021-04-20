@@ -5,3 +5,16 @@
 @function positionY($height,$margin){
     @return -1*($height+$margin);
 }
+
+@mixin centerflex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin media-query($key: tablet-low) {
+    @media screen and  (min-width: map-get($breakpoints, $key)){
+        @content;
+    }
+}
+    

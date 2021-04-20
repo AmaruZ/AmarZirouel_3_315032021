@@ -10,6 +10,13 @@ $color-lightgrey: #F6F6F6;
 $anim-delay: 300ms;
 $dishes-delay: 100ms;
 
-$height: 200px;
+$height: 80px;
 $margin: 200px;
+$width-checked: 60px;
+$width-price: 100px;
+$width-dish: 350px;
 
+$breakpoints: (
+    tablet-low: 680px,
+    desktop: 1366px
+);
