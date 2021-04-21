@@ -11,7 +11,7 @@
     border: 5px solid $color-primary;
     border-bottom-color: transparent;
     border-left-color: transparent;
-    animation: spinner 0s 1.5 linear, fadeout 1ms 3s 1 forwards;
+    animation: spinner 2s 1.5 linear, fadeout 1ms 3s 1 forwards;
     &::before {
         content: "";
         position: absolute;
@@ -21,7 +21,7 @@
         border: 5px solid $color-secondary;
         border-top-color: transparent;
         border-right-color: transparent;
-        animation: spinner 0s 3 reverse linear, fadeout 1ms 3s 1 forwards;
+        animation: spinner 1s 3 reverse linear, fadeout 1ms 3s 1 forwards;
     }
 }
 
@@ -30,7 +30,7 @@
     top: 0;
     transform: translateY(-10000px);
     animation: show-content 100ms 1 forwards;
-    //animation-delay: 3050ms;
+    animation-delay: 3050ms;
     width: 100%;
     @include media-query(desktop){
     }
