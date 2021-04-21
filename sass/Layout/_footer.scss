@@ -12,6 +12,10 @@ footer{
     &__logo{
         font-family: 'Shrikhand', cursive;
         font-size: 1.8rem;
+        @include media-query(desktop){
+            display: flex;
+            justify-content: center;
+        }
     }
     &__list{
         margin-top: 10px;
@@ -19,6 +23,7 @@ footer{
         ul{
             @include media-query(desktop){
                 display: flex;
+                justify-content: center;
             }
         }
         

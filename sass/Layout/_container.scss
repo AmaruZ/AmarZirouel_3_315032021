@@ -11,7 +11,7 @@
     border: 5px solid $color-primary;
     border-bottom-color: transparent;
     border-left-color: transparent;
-    animation: spinner 2s 1.5 linear, fadeout 1ms 3s 1 forwards;
+    animation: spinner 0s 1.5 linear, fadeout 1ms 3s 1 forwards;
     &::before {
         content: "";
         position: absolute;
@@ -21,7 +21,7 @@
         border: 5px solid $color-secondary;
         border-top-color: transparent;
         border-right-color: transparent;
-        animation: spinner 1s 3 reverse linear, fadeout 1ms 3s 1 forwards;
+        animation: spinner 0s 3 reverse linear, fadeout 1ms 3s 1 forwards;
     }
 }
 
@@ -30,8 +30,10 @@
     top: 0;
     transform: translateY(-10000px);
     animation: show-content 100ms 1 forwards;
-    animation-delay: 3050ms;
+    //animation-delay: 3050ms;
     width: 100%;
+    @include media-query(desktop){
+    }
 }
 
 .explore {
@@ -57,11 +59,23 @@
 }
 
 .fonction-container {
-    margin-left: 20px;
     padding-top: 30px;
+    padding-left: 20px;
 
     &__list {
         margin-top: 30px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @include media-query(desktop){
+            flex-flow: row wrap;
+            justify-content: space-between;
+            width: 98%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
     }
 }
 
@@ -73,7 +87,7 @@
     i {
         color: $color-grey;
     }
-    input {
+    &__input {
         background-color: lighten($color: $color-grey, $amount: 70%);
         color: $color-grey;
         border: none;
@@ -81,6 +95,7 @@
         font-weight: 600;
         margin-left: 15px;
         font-size: 1.5rem;
+        height: 3rem;
         &::placeholder {
             color: #3e3e3e;
         }
@@ -92,6 +107,12 @@
     margin-top: 50px;
     padding-top: 50px;
     padding-bottom: 5rem;
+    @include media-query(desktop){
+        border-radius: 20px;
+        margin: 20px;
+        padding: 30px 0;
+    }
+
     &__title {
         margin-left: 2rem;
     }
@@ -99,6 +120,10 @@
         display: flex;
         flex-direction: column;
         margin-top: 2rem;
+        @include media-query(desktop){
+            flex-flow: row wrap;
+            margin: 20px 10px;
+        }
     }
 }
 
@@ -112,6 +137,10 @@
     margin-right: auto;
     border-radius: 20px;
     @include shadow;
+    @include media-query(desktop){
+        width: 47%;
+        margin-bottom: 20px;
+    }
     &__visu {
         height: 70%;
         position: relative;
@@ -219,7 +248,9 @@
     @include media-query(desktop){
         border-radius: 3.3rem;
         margin-bottom: 2rem;
-        overflow: hidden;
+        width: 99%;
+        margin-left: auto;
+        margin-right: auto;
         
     }
     
@@ -236,13 +267,14 @@
     &__list {
         display: flex;
         flex-direction: column;
+        margin-left: auto;
+        margin-right: auto;
         margin-bottom: 2rem;
         width: 95%;
-        @include media-query(desktop){
+        @include media-query(tablet-low){
             flex-flow: row wrap;
-            justify-content: flex-start;
-            margin-left: auto;
-            margin-right: auto;
+            justify-content: space-between;
+
             
         }
     }
@@ -266,24 +298,26 @@
     border-radius: 1.2rem;
     margin-bottom: 1.2rem;
     overflow: hidden;
-    @for $dishes from 1 through 10 {
+    @for $dishes from 2 through 10 {
         &--#{$dishes} {
             animation-delay: $dishes-delay * $dishes;
         }
     }
     animation: show-dishes 1s;
-    @include media-query(desktop){
+    @include media-query(tablet-high){
+        $width-dish: 46%;
         width: $width-dish;
         margin-left: 3rem;
         margin-right: 0rem;
     }
+    @include media-query(desktop){
+        $width-dish: 47.5%;
+        width: $width-dish;
+    }
 
     &__text {
         margin: 1.2rem 0 1.5rem 1rem;
-        width: calc(#{$width-dish} + -#{$width-price});
-        @include media-query(desktop){
-            width: calc(#{$width-dish} + -#{$width-price});
-        }
+        width: unquote("calc(100% - 60px)");
     }
 
     &__name {
@@ -333,11 +367,8 @@
         transition: transform 1s;
     }
     &:hover &__text {
-        width: 55%;
+        width: unquote("calc(100% - 160px)");
         transition: all 1s;
-        @include media-query(desktop){
-            width: 65%;
-        }
     }
 }
 
@@ -346,4 +377,7 @@
     @include centerflex;
     padding-top: 3rem;
     padding-bottom: 4rem;
+    @include media-query(desktop){
+        background: #fff;
+    }
 }

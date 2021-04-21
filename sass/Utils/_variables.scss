@@ -14,9 +14,11 @@ $height: 80px;
 $margin: 200px;
 $width-checked: 60px;
 $width-price: 100px;
-$width-dish: 350px;
+$width-dish: 98%;
 
 $breakpoints: (
     tablet-low: 680px,
+    tablet-medium: 768px,
+    tablet-high: 1024px,
     desktop: 1366px
 );
