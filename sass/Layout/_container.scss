@@ -64,7 +64,6 @@
 
     &__list {
         margin-top: 30px;
-
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -93,7 +92,8 @@
         border: none;
         font-family: "Roboto", sans-serif;
         font-weight: 600;
-        margin-left: 15px;
+        margin-left: 5px;
+        padding-left: 10px;
         font-size: 1.5rem;
         height: 3rem;
         &::placeholder {
@@ -128,6 +128,7 @@
 }
 
 .restaurant {
+    position: relative;
     height: 25rem;
     background-color: #fff;
     margin-bottom: 15px;
@@ -177,12 +178,22 @@
     &__title {
         font-weight: 700;
     }
+    &__heart{
+        position: absolute;
+        bottom: 23px;
+        right: 25px;
+
+        
+    }
 }
 
 .heart {
+
+
     &__animated {
+        cursor: pointer;
         font-size: 2.5rem;
-        &:hover::before {
+        &:hover::before, &:active::before {
             opacity: 1;
             transition: all 1s;
         }
@@ -242,6 +253,7 @@
 .plats,
 .entrees,
 .desserts {
+    
     display: flex;
     flex-direction: column;
     background-color: $color-lightgrey;
@@ -287,6 +299,7 @@
 }
 
 .plat {
+    cursor: pointer;
     background-color: #fff;
     display: flex;
     flex-direction: row;

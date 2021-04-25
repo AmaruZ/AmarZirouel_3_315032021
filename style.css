@@ -109,6 +109,7 @@ ul {
 }
 
 .fonction {
+  cursor: pointer;
   height: 7.3rem;
   display: flex;
   align-items: center;
@@ -317,7 +318,8 @@ footer {
   border: none;
   font-family: "Roboto", sans-serif;
   font-weight: 600;
-  margin-left: 15px;
+  margin-left: 5px;
+  padding-left: 10px;
   font-size: 1.5rem;
   height: 3rem;
 }
@@ -354,6 +356,7 @@ footer {
 }
 
 .restaurant {
+  position: relative;
   height: 25rem;
   background-color: #fff;
   margin-bottom: 15px;
@@ -406,11 +409,17 @@ footer {
 .restaurant__title {
   font-weight: 700;
 }
+.restaurant__heart {
+  position: absolute;
+  bottom: 23px;
+  right: 25px;
+}
 
 .heart__animated {
+  cursor: pointer;
   font-size: 2.5rem;
 }
-.heart__animated:hover::before {
+.heart__animated:hover::before, .heart__animated:active::before {
   opacity: 1;
   transition: all 1s;
 }
@@ -523,6 +532,7 @@ footer {
 }
 
 .plat {
+  cursor: pointer;
   background-color: #fff;
   display: flex;
   flex-direction: row;
