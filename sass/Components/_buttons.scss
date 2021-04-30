@@ -8,7 +8,7 @@
 	padding:16px 30px;
     @include shadow;
 
-    &:hover{
+    &:hover, &:active{
         filter: brightness(110%);
         box-shadow: 0px 4px 20px 0px #727272;
         transition: all 0.2s;
@@ -27,9 +27,10 @@
     border-radius: 20px;
     margin-bottom: 20px;
     margin-right: 20px;
-    padding-top: 0.5rem;
-    width: 95%;
+    padding-top: 5px;
+    width: 92%;
     max-width: 400px;
+    counter-increment: functionlist;
     @include media-query(tablet-low){
         max-width: inherit;
         width: 60%;
@@ -38,37 +39,35 @@
         width: 30%;
     }
 
-
-    &__number{
+    &::before{
+        content: counter(functionlist);
+        position: absolute;
         @include centerflex;
-        height: 25px;
+        height: 24px;
         width: 25px;
-        padding-top: 0.3rem;
+        padding-top: 2.5px;
         background-color: $color-primary;
         color: white;
         border-radius: 50%;
-        margin-left: -15px;
+        margin-left: -13px;
         font-size: 1.4rem;
     }
     &__icon{
-        color: $color-grey;
-        margin-left: 30px;
-        margin-right: 20px;
-        font-size: 1.9rem;
-        :hover > &{
+        color: lighten($color-grey,25%);
+        margin-left: 35px;
+        margin-right: 25px;
+        font-size: 2rem;
+        :hover > &, :active > &{
             color: $color-primary;
         }
     }
     &__text{
         font-weight: 500;
         font-size: 1.6rem;
-
     }
 
-    &:hover{
+    &:hover, &:active{
         background: lighten($color-primary,35);
-
-
     }
 
 }

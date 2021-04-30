@@ -12,6 +12,11 @@
     align-items: center;
 }
 
+@mixin margin-auto{
+    margin-left: auto;
+    margin-right: auto;
+}
+
 @mixin media-query($key: tablet-low) {
     @media screen and  (min-width: map-get($breakpoints, $key)){
         @content;

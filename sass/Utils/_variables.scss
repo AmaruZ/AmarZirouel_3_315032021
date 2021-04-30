@@ -10,7 +10,10 @@ $color-lightgrey: #F6F6F6;
 $anim-delay: 300ms;
 $dishes-delay: 100ms;
 
-$height: 80px;
+$width-spinner-bar: 80px;
+$height-spinner-bar: #{$width-spinner-bar};
+$width-spinner-bar-reversed: 55px;
+$heigth-spinner-bar-reversed: #{$width-spinner-bar-reversed};
 $margin: 200px;
 $width-checked: 60px;
 $width-price: 100px;

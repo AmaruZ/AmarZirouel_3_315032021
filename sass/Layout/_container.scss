@@ -1,9 +1,8 @@
 .loader {
-    width: 80px;
-    height: $height;
+    width: $width-spinner-bar;
+    height: $height-spinner-bar;
     margin-top: $margin;
-    margin-left: auto;
-    margin-right: auto;
+    @include margin-auto;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -15,8 +14,8 @@
     &::before {
         content: "";
         position: absolute;
-        width: 55px;
-        height: 55px;
+        width: $width-spinner-bar-reversed;
+        height: $heigth-spinner-bar-reversed;
         border-radius: 50%;
         border: 5px solid $color-secondary;
         border-top-color: transparent;
@@ -28,9 +27,7 @@
 .content {
     position: absolute;
     top: 0;
-    transform: translateY(-10000px);
-    animation: show-content 100ms 1 forwards;
-    animation-delay: 3050ms;
+    animation: show-content 0ms 3000ms both;
     width: 100%;
     @include media-query(desktop){
     }
@@ -41,8 +38,8 @@
     flex-direction: column;
     align-items: center;
     background-color: $color-lightgrey;
-    padding-top: 4rem;
-    padding-bottom: 5.5rem;
+    padding-top: 40px;
+    padding-bottom: 55px;
     &__title {
         width: 70%;
         text-align: center;
@@ -71,8 +68,7 @@
             flex-flow: row wrap;
             justify-content: space-between;
             width: 98%;
-            margin-left: auto;
-            margin-right: auto;
+            @include margin-auto;
         }
 
     }
@@ -81,8 +77,8 @@
 .localisation {
     background-color: lighten($color: $color-grey, $amount: 70%);
     @include centerflex;
-    height: 5rem;
-    padding-left: 4rem;
+    height: 50px;
+    padding-left: 40px;
     i {
         color: $color-grey;
     }
@@ -95,7 +91,7 @@
         margin-left: 5px;
         padding-left: 10px;
         font-size: 1.5rem;
-        height: 3rem;
+        height: 30px;
         &::placeholder {
             color: #3e3e3e;
         }
@@ -106,7 +102,7 @@
     background-color: $color-lightgrey;
     margin-top: 50px;
     padding-top: 50px;
-    padding-bottom: 5rem;
+    padding-bottom: 50px;
     @include media-query(desktop){
         border-radius: 20px;
         margin: 20px;
@@ -114,12 +110,12 @@
     }
 
     &__title {
-        margin-left: 2rem;
+        margin-left: 20px;
     }
     &__list {
         display: flex;
         flex-direction: column;
-        margin-top: 2rem;
+        margin-top: 20px;
         @include media-query(desktop){
             flex-flow: row wrap;
             margin: 20px 10px;
@@ -129,13 +125,12 @@
 
 .restaurant {
     position: relative;
-    height: 25rem;
+    height: 250px;
     background-color: #fff;
     margin-bottom: 15px;
-    min-width: 33.5rem;
+    min-width: 335px;
     width: 90%;
-    margin-left: auto;
-    margin-right: auto;
+    @include margin-auto;
     border-radius: 20px;
     @include shadow;
     @include media-query(desktop){
@@ -162,16 +157,16 @@
             border-radius: 3px;
             position: absolute;
             right: 0;
-            margin-top: -16.5rem;
-            margin-right: 2rem;
+            margin-top: -165px;
+            margin-right: 20px;
             font-weight: 600;
         }
     }
     &__text {
         display: flex;
         justify-content: space-between;
-        margin-left: 1.5rem;
-        margin-right: 2.5rem;
+        margin-left: 15px;
+        margin-right: 25px;
         height: 30%;
         align-items: center;
     }
@@ -182,14 +177,13 @@
         position: absolute;
         bottom: 23px;
         right: 25px;
+        width: 24px;
 
         
     }
 }
 
 .heart {
-
-
     &__animated {
         cursor: pointer;
         font-size: 2.5rem;
@@ -208,21 +202,19 @@
     &__visible {
         font-size: 2.5rem;
         -webkit-text-stroke: 0.9px white;
-        position: relative;
-        right: -2.9rem;
-        //text-shadow: 0px 0px 1px black;
-        //color: white;
+        position: absolute;
+       // margin-right: -29px;
     }
 }
 
 .resto-name {
-    height: 30rem;
+    height: 300px;
     display: flex;
     position: relative;
     @include media-query(desktop){
-        border-bottom-left-radius: 3.3rem;
-        border-bottom-right-radius: 3.3rem;
-        margin-bottom: 2rem;
+        border-bottom-left-radius: 33px;
+        border-bottom-right-radius: 33px;
+        margin-bottom: 20px;
         overflow: hidden;
     }
 
@@ -230,7 +222,7 @@
         object-fit: cover;
         width: 100%;
         &--charonne {
-            object-position: 0rem -9rem;
+            object-position: 0px -90px;
         }
     }
 
@@ -242,59 +234,54 @@
         align-items: center;
         align-self: flex-end;
         width: 100%;
-        padding-left: 2rem;
-        padding-right: 4rem;
-        height: 8rem;
-        border-top-left-radius: 3.3rem;
-        border-top-right-radius: 3.3rem;
+        padding-left: 20px;
+        padding-right: 40px;
+        height: 80px;
+        border-top-left-radius: 33px;
+        border-top-right-radius: 33px;
     }
 }
 
 .plats,
 .entrees,
 .desserts {
-    
     display: flex;
     flex-direction: column;
     background-color: $color-lightgrey;
     @include media-query(desktop){
-        border-radius: 3.3rem;
-        margin-bottom: 2rem;
+        border-radius: 33px;
+        margin-bottom: 20px;
         width: 99%;
-        margin-left: auto;
-        margin-right: auto;
-        
+        @include margin-auto;
     }
     
-
     &__title {
         text-transform: uppercase;
-        margin-bottom: 1.5rem;
-        padding-left: 1.5rem;
+        margin-bottom: 15px;
+        padding-left: 15px;
         @include media-query(desktop){
-            margin-top: 2rem;
+            margin-top: 20px;
         }
-        
+        &::after{
+            content: "";
+            display: block;
+            margin-top: 5px;
+            height: 3px;
+            width: 40px;
+            background-color: $color-tertiary;
+        }
     }
+
     &__list {
         display: flex;
         flex-direction: column;
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 2rem;
+        @include margin-auto;
+        margin-bottom: 20px;
         width: 95%;
         @include media-query(tablet-low){
             flex-flow: row wrap;
             justify-content: space-between;
-
-            
         }
-    }
-    &__underline {
-        margin-top: 5px;
-        height: 3px;
-        width: 4rem;
-        background-color: $color-tertiary;
     }
 }
 
@@ -303,13 +290,12 @@
     background-color: #fff;
     display: flex;
     flex-direction: row;
-    margin-left: auto;
-    margin-right: auto;
+    @include margin-auto;
     width: $width-dish;
-    height: 6.8rem;
+    height: 68px;
     @include shadow;
-    border-radius: 1.2rem;
-    margin-bottom: 1.2rem;
+    border-radius: 12px;
+    margin-bottom: 12px;
     overflow: hidden;
     @for $dishes from 2 through 10 {
         &--#{$dishes} {
@@ -320,8 +306,8 @@
     @include media-query(tablet-high){
         $width-dish: 46%;
         width: $width-dish;
-        margin-left: 3rem;
-        margin-right: 0rem;
+        margin-left: 30px;
+        margin-right: 0px;
     }
     @include media-query(desktop){
         $width-dish: 47.5%;
@@ -329,7 +315,7 @@
     }
 
     &__text {
-        margin: 1.2rem 0 1.5rem 1rem;
+        margin: 12px 0 15px 10px;
         width: unquote("calc(100% - 60px)");
     }
 
@@ -338,14 +324,14 @@
         white-space: nowrap;
         font-weight: 700;
         font-size: 1.7rem;
-        margin-bottom: 0.3rem;
+        margin-bottom: 3px;
         text-overflow: ellipsis;
     }
     &__descrp {
         overflow: hidden;
         white-space: nowrap;
         font-size: 1.45rem;
-        height: 1.8rem;
+        height: 18px;
         text-overflow: ellipsis;
     }
     &__price {
@@ -353,15 +339,15 @@
         align-self: flex-end;
         text-align: center;
         width: $width-price;
-        margin-bottom: 1.5rem;
+        margin-bottom: 15px;
     }
     &__checked {
         background: $color-tertiary;
-        height: 6.8rem;
+        height: 68px;
         width: $width-checked;
-        margin-left: -5rem;
+        margin-left: -50px;
         @include centerflex;
-        transform: translateX(6rem);
+        transform: translateX(60px);
     }
 
     .fas {
@@ -369,17 +355,17 @@
         color: white;
         transform: rotate(0);
     }
-    &:hover &__checked {
+    &:hover &__checked, &:active &__checked {
         transform: translateX(0);
         margin-left: 0;
         transition: all 1s;
     }
 
-    &:hover .fas {
+    &:hover .fas, &:active .fas {
         transform: rotate(1turn);
         transition: transform 1s;
     }
-    &:hover &__text {
+    &:hover &__text, &:active &__text {
         width: unquote("calc(100% - 160px)");
         transition: all 1s;
     }
@@ -388,8 +374,8 @@
 .btn-container {
     background: $color-lightgrey;
     @include centerflex;
-    padding-top: 3rem;
-    padding-bottom: 4rem;
+    padding-top: 30px;
+    padding-bottom: 40px;
     @include media-query(desktop){
         background: #fff;
     }
