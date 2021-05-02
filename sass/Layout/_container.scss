@@ -1,7 +1,7 @@
 .loader {
     width: $width-spinner-bar;
     height: $height-spinner-bar;
-    margin-top: $margin;
+    margin-top: 25vh;
     @include margin-auto;
     display: flex;
     justify-content: space-around;
