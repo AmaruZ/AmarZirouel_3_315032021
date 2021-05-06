@@ -66,7 +66,7 @@
         align-items: center;
         @include media-query(desktop){
             flex-flow: row wrap;
-            justify-content: space-between;
+            justify-content: space-around;
             width: 98%;
             @include margin-auto;
         }
@@ -297,12 +297,12 @@
     border-radius: 12px;
     margin-bottom: 12px;
     overflow: hidden;
-    @for $dishes from 2 through 10 {
+    @for $dishes from 1 through 10 {
         &--#{$dishes} {
-            animation-delay: $dishes-delay * $dishes;
+            animation-delay: $dishes-delay * $dishes - $dishes-delay;
         }
     }
-    animation: show-dishes 1s;
+    animation: show-dishes 1s both;
     @include media-query(tablet-high){
         $width-dish: 46%;
         width: $width-dish;

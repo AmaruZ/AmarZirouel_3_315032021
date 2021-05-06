@@ -60,6 +60,9 @@
         :hover > &, :active > &{
             color: $color-primary;
         }
+        @include media-query(tablet-low){
+            margin-left: 20%;
+        }
     }
     &__text{
         font-weight: 500;
