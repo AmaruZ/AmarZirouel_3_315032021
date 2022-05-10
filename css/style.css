@@ -10,7 +10,7 @@
 }
 @keyframes fadeout {
   0% {
-    opacity: 0;
+    opacity: 1;
   }
   100% {
     opacity: 0;
@@ -265,6 +265,7 @@ footer {
   animation: show-content 0ms 3000ms both;
   width: 100%;
 }
+
 .explore {
   display: flex;
   flex-direction: column;
